@@ -83,7 +83,7 @@ Numero Numero::operator-(Numero& rNumero){
 		int Total;
 		Total = acumulador1 - acumulador2;
 		cout<<"El numero en decimal es: "<<Total<<endl;
-		respuesta = Total;
+		respuesta = Total+"";
 		Numero retorno(respuesta);
 		return retorno;
 	}
