@@ -26,9 +26,10 @@ Numero Numero::operator+(Numero& rNumero){
 			
 			acumulador +=  num*(pow(2,tamano-1));
 		}
-	}
+	
 	string respuesta = " ";
 	respuesta = acumulador + " ";
 	Numero retorno(respuesta);
 	return retorno;
+	}
 }
