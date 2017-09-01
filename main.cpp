@@ -26,13 +26,15 @@ int main(){
 		}else if(opcion == 2){
 			cout<<"Lista de numeros"<<endl;
 			for(int i = 0; i < numeros.size(); i++) {
-				cout<<i<<". "<<numeros[i].getNumero()<<endl<<endl<<endl;
+				cout<<i<<". "<<numeros[i].getNumero()<<endl<<endl;
 			}
+			cout<<endl<<endl;
 			cout<<"Elija el primer numero a operar"<<endl;
 			int primerN, segundoN;
 			cin>>primerN;
 			cout<<"Elija el segundo numero a operar"<<endl;
 			cin>>segundoN;
+			cout<<endl<<endl;
 
 			cout<<"Elija la operacion"<<endl;
 			cout<<"1. Sumar"<<endl;
@@ -44,7 +46,8 @@ int main(){
 			cin>>operacion;
 			
 			if(operacion == 1){
-			
+			Numero suma = numeros[primerN]+numeros[segundoN];
+			cout<<"aqui: "<< suma.getNumero()<<endl;
 
 			}else if(operacion == 2){
 
