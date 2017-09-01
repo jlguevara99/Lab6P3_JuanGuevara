@@ -50,7 +50,7 @@ int main(){
 			cout<<"1. Sumar"<<endl;
 			cout<<"2. Resta"<<endl;
 			cout<<"3. Multiplicar"<<endl;
-
+			cout<<endl;
 			int operacion;
 
 			cin>>operacion;
@@ -68,7 +68,7 @@ int main(){
 			}else{
 				cout<<"Opcion invalida"<<endl;
 			}
-			
+			cout<<endl;
 		}else if(opcion == 3){
 			salir = false;
 		}else{
