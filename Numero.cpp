@@ -49,7 +49,33 @@ Numero Numero::operator+(Numero& rNumero){
 		respuesta = Total+"";
 		Numero retorno(respuesta);
 
-				
+		string hexa = " ";
+		while(Total>1){
+			double residuo;
+			residuo = Total % 16;
+			Total = Total/16;
+			int multiplicacion;
+			multiplicacion = residuo*16;
+			if(multiplicacion == 11){
+				hexa += "B";
+			}else if(multiplicacion == 12){
+				hexa += "C";
+			}else if(multiplicacion == 13){
+				hexa += "D";
+			}else if(multiplicacion == 14){
+				hexa += "E";
+			}else if(multiplicacion == 15){
+				hexa += "F";
+			}else if(multiplicacion == 10){
+				hexa += "A";
+			}else{
+				hexa+= "1.";
+			}
+		}
+
+		cout<<"El numero en hexadecimal es: "<< hexa;
+
+
 
 
 
