@@ -1,5 +1,5 @@
 #include "Numero.h"
-
+#include<iostream>
 #include <string>
 using namespace std;
 
@@ -48,32 +48,41 @@ Numero Numero::operator+(Numero& rNumero){
 		cout<<"El numero en decimal es: "<<Total<<endl;
 		respuesta = Total+"";
 		Numero retorno(respuesta);
-
+		Total = 6898;
 		string hexa = " ";
-		while(Total>1){
-			double residuo;
+		while(Total>=1){
+			float residuo;
 			residuo = Total % 16;
+			//cout<<residuo<<endl;
 			Total = Total/16;
 			int multiplicacion;
 			multiplicacion = residuo*16;
-			if(multiplicacion == 11){
+			int valor = residuo;
+			if(residuo == 11){
 				hexa += "B";
-			}else if(multiplicacion == 12){
+			}else if(residuo == 12){
 				hexa += "C";
-			}else if(multiplicacion == 13){
+			}else if(residuo == 13){
 				hexa += "D";
-			}else if(multiplicacion == 14){
+			}else if(residuo == 14){
 				hexa += "E";
-			}else if(multiplicacion == 15){
+			}else if(residuo == 15){
 				hexa += "F";
-			}else if(multiplicacion == 10){
+			}else if(residuo == 10){
 				hexa += "A";
+			}else if(Total==1){
+				hexa+=1;
 			}else{
-				hexa+= "1.";
+				hexa+= to_string(valor);
 			}
 		}
+		string temporal = "";
 
-		cout<<"El numero en hexadecimal es: "<< hexa;
+		for(int i = hexa.size()-1; i >= 0; i--) {
+			temporal+= hexa.at(i);
+		}
+
+		cout<<"El numero en hexadecimal es: "<< temporal<<endl;
 
 
 
