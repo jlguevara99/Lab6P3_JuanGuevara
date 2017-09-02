@@ -48,7 +48,7 @@ Numero Numero::operator+(Numero& rNumero){
 		cout<<"El numero en decimal es: "<<Total<<endl;
 		respuesta = Total+"";
 		Numero retorno(respuesta);
-		Total = 6898;
+		
 		string hexa = " ";
 		while(Total>=1){
 			float residuo;
@@ -71,7 +71,7 @@ Numero Numero::operator+(Numero& rNumero){
 			}else if(residuo == 10){
 				hexa += "A";
 			}else if(Total==1){
-				hexa+=1;
+				hexa+="1";
 			}else{
 				hexa+= to_string(valor);
 			}
@@ -83,10 +83,6 @@ Numero Numero::operator+(Numero& rNumero){
 		}
 
 		cout<<"El numero en hexadecimal es: "<< temporal<<endl;
-
-
-
-
 
 
 		return retorno;
@@ -119,6 +115,40 @@ Numero Numero::operator-(Numero& rNumero){
 		Total = acumulador1 - acumulador2;
 		cout<<"El numero en decimal es: "<<Total<<endl;
 		respuesta = Total+"";
+
+		string hexa = " ";
+		while(Total>=1){
+			float residuo;
+			residuo = Total % 16;
+			Total = Total/16;
+			int multiplicacion;
+			multiplicacion = residuo*16;
+			int valor = residuo;
+			if(residuo == 11){
+				hexa += "B";
+			}else if(residuo == 12){
+				hexa += "C";
+			}else if(residuo == 13){
+				hexa += "D";
+			}else if(residuo == 14){
+				hexa += "E";
+			}else if(residuo == 15){
+				hexa += "F";
+			}else if(residuo == 10){
+				hexa += "A";
+			}else if(Total == 1){
+			hexa += "1";
+			}else{
+				hexa+= to_string(valor);
+			}
+		}
+		
+		string temporal = "";
+
+		for(int i = hexa.size()-1; i >= 0; i--) {
+			temporal += hexa.at(i);
+		}
+		cout<<"El numero en hexadecimal es: "<< temporal<<endl;
 		Numero retorno(respuesta);
 		return retorno;
 	}
@@ -149,6 +179,41 @@ Numero Numero::operator*(Numero& rNumero){
 		Total = acumulador1*acumulador2;
 		cout<<"El numero en decimal es: "<<Total<<endl;
 		respuesta = Total;
+
+		string hexa = " ";
+		while(Total>=1){
+			float residuo;
+			residuo = Total % 16;
+
+			Total = Total/16;
+			int multiplicacion;
+			multiplicacion = residuo*16;
+			int valor = residuo;
+			if(residuo == 11){
+				hexa += "B";
+			}else if(residuo == 12){
+				 hexa += "C";
+			}else if(residuo == 13){
+				 hexa += "D";
+			}else if(residuo == 14){
+				 hexa += "E";
+			}else if(residuo == 15){
+				 hexa += "F";
+			}else if(residuo == 10){
+				 hexa += "A";
+			}else if(Total==1){
+				 hexa += "1";
+			}else{
+				hexa+= to_string(valor);
+			}
+		}
+		string temporal = "";
+
+		for(int i = hexa.size()-1; i >= 0; i--) {
+			temporal += hexa.at(i);
+		}
+		cout<<"El numero en hexadecimal es: "<<temporal<<endl;
+		
 		Numero retorno(respuesta);
 		return retorno;
 	}
