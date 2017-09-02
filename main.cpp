@@ -18,6 +18,7 @@ int main(){
 	do {
 		opcion = menu();
 		if(opcion == 1){
+			cout<<"Sorry, solo funciona con binario... :("<<endl<<"pero transforma a lo demas"<<endl;
 			cout<<"Ingrese el numero"<<endl;
 			string numero;
 			cin>>numero;
@@ -57,14 +58,14 @@ int main(){
 			
 			if(operacion == 1){
 				Numero suma = numeros[primerN]+numeros[segundoN];
-				cout<<"aqui: "<< suma.getNumero()<<endl;
+				//cout<<"aqui: "<< suma.getNumero()<<endl;
 
 			}else if(operacion == 2){
 				Numero resta = numeros[primerN]-numeros[segundoN];
-				cout<<"aqui: "<< resta.getNumero()<<endl;
+				//cout<<"aqui: "<< resta.getNumero()<<endl;
 			}else if(operacion == 3){
 				Numero multi = numeros[primerN]*numeros[segundoN];
-				cout<<"aqui: "<<multi.getNumero()<<endl;
+				//cout<<"aqui: "<<multi.getNumero()<<endl;
 			}else{
 				cout<<"Opcion invalida"<<endl;
 			}
